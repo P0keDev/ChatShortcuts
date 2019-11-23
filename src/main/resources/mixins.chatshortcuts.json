@@ -1,0 +1,9 @@
+{
+  "package": "dev.p0ke.chatshortcuts.mixins",
+  "refmap": "mixins.chatshortcuts.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinC01PacketChatMessage",
+    "MixinNetHandlerPlayClient"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "ChatShortcuts",
+  "author": "P0ke",
+  "description": "A simple chat shortcuts mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "mixinConfigs": [
+    "mixins.chatshortcuts.json"
+  ],
+  "tweakClass": "dev.p0ke.chatshortcuts.tweaker.ChatShortcutsTweaker"
+}

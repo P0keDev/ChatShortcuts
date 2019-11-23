@@ -1,0 +1,16 @@
+[
+{
+  "modid": "chatshortcuts",
+  "name": "Chat Shortcuts",
+  "description": "A simple chat shortcuts mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["P0ke"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
