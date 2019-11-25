@@ -3,8 +3,11 @@ package dev.p0ke.chatshortcuts.util;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
@@ -26,7 +29,7 @@ public class ShortcutHandler {
 	public void loadShortcuts() {
 		if(shortcutFile.exists()) {
 			try {
-				BufferedReader br = new BufferedReader(new FileReader(shortcutFile));
+				BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(shortcutFile), StandardCharsets.UTF_8));
 				shortcuts = gson.fromJson(br.readLine(), new TypeToken<HashMap<String, String>>() {}.getType());
 				br.close();
 			} catch (Exception e) {
@@ -41,7 +44,7 @@ public class ShortcutHandler {
 	public void saveShortcuts() {
 		try {
 			shortcutFile.createNewFile();
-			BufferedWriter bw = new BufferedWriter(new FileWriter(shortcutFile));
+			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(shortcutFile), StandardCharsets.UTF_8));
 			bw.write(gson.toJson(shortcuts));
 			bw.close();
 		} catch (Exception e) {
