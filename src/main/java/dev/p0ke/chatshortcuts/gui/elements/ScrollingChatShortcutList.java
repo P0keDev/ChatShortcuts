@@ -90,7 +90,7 @@ public class ScrollingChatShortcutList extends GuiScrollingList {
 	@Override
 	protected void drawSlot(int slotIdx, int entryRight, int slotTop, int slotBuffer, Tessellator tess) {
 		ShortcutListEntry shortcut = shortcuts.get(slotIdx);
-		boolean visible = slotTop > top && slotTop + slotHeight < bottom;
+		boolean visible = slotTop >= top && slotTop + slotHeight <= bottom;
 		shortcut.removeButton.visible = visible;
 		
 		if(visible) {
